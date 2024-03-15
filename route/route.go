@@ -77,3 +77,7 @@ func Router(rw http.ResponseWriter, r *http.Request) {
 
 	log.Printf("%v", todos)
 }
+
+func ReturnHello() string {
+	return "Hello World"
+}

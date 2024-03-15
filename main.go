@@ -1,6 +1,7 @@
 package main
 
 import (
+	r "api-crud/route"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -17,6 +18,8 @@ type Todo struct {
 var todos []Todo
 
 func main() {
+	hello := r.ReturnHello()
+	println(hello)
 	http.HandleFunc("/api/v1/todo", func(rw http.ResponseWriter, r *http.Request) {
 		rw.Header().Add("Content-Type", "application/json")
 		rw.Header().Add("Access-Control-Allow-Origin", "*")
