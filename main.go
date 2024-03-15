@@ -17,7 +17,7 @@ type Todo struct {
 var todos []Todo
 
 func main() {
-	http.HandleFunc("/", func(rw http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/api/v1/todo", func(rw http.ResponseWriter, r *http.Request) {
 		rw.Header().Add("Content-Type", "application/json")
 		rw.Header().Add("Access-Control-Allow-Origin", "*")
 
