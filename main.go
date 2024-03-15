@@ -86,3 +86,4 @@ func main() {
 	fmt.Println("Menjalankan server di http://localhost:8000")
 	http.ListenAndServe(":8000", nil)
 }
+
